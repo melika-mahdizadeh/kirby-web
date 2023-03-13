@@ -1,5 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500;600;700;800&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+button, a, ul{
+    all: unset;
+    cursor: pointer;
+}
+/* menu button */
+header{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: fixed;
+}
+.h-links{
+    position: absolute;
+    top: 4.4rem;
+    right: 0;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.37rem;
+    font-weight: 700;
+    color: #1423A5;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+}
+#menuBtn{
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url(images/nav-menu.svg);
+}
+#closeBtn{
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url(images/nav-close.svg);
+    position: absolute;
+    right: 1rem;
+    display: none;
+}
+.active::before{
+    content: '';
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    background: url(images/nav-star_2x.png);
+    background-size: cover;
+    margin-right: .5rem;
+    
+}
+.active::after{
+    content: '';
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    background: url(images/nav-star_2x.png);
+    background-size: cover;
+    margin-left: .5rem;
+    
+}
+.h-link:hover::after{
+    content: '';
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    background: url(images/nav-star_2x.png);
+    background-size: cover;
+    margin-left: .5rem;
+    
+}
+.h-link:hover::before{
+    content: '';
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    background: url(images/nav-star_2x.png);
+    background-size: cover;
+    margin-right: .5rem;
+}
+/* desktop responsive */
+@media screen and (min-width:764px){
+    #menuBtn, #closeBtn{
+        display: none;
+    }
+    .mobile-logo{
+        display: none;
+    }
+    .h-links{
+        position: relative;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 0;
+        justify-content: center;
+        gap: 8rem;
+    }
 }
