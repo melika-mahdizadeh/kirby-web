@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500;600;700;800&family=Sniglet:wght@800&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -15,12 +15,13 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: .8rem;
     position: fixed;
+    z-index: 4;
 }
 .h-links{
     position: absolute;
-    top: 4.4rem;
+    top: 4.1rem;
     right: 0;
     width: 100%;
     display: none;
@@ -32,6 +33,7 @@ header{
     color: #1423A5;
     gap: 1.5rem;
     padding-bottom: 1rem;
+    background-color: white;
 }
 #menuBtn{
     width: 1.2rem;
@@ -85,6 +87,80 @@ header{
     background-size: cover;
     margin-right: .5rem;
 }
+
+/* hero section */
+.hero{
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #CCFFFD 0%, #FFB6D9 100%);
+    overflow: hidden;
+    padding-top: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+.spiral-img{
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    
+}
+.hero-title{
+    font-family: 'Sniglet', cursive;
+    font-size: 1.5rem;
+    color: #1423A5;
+}
+.hero-logo{
+    width: 220px;
+}
+.hero-p{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #1423A5;
+    line-height: 1.6rem;
+    padding: 0 .8rem;
+}
+.hero-left{
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+.hero-btn{
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    background-color: #2457e4;
+    padding: 4px 0 9px 0;
+    width: 290px;
+    border-radius: 25px;
+    text-shadow: 0 2px rgb(0 0 0 / 20%);
+    position: relative;
+    border: solid 3px transparent;
+    border-color: #1423A5;
+    letter-spacing: .05rem;
+}
+.hero-btn:before {
+    background-color: rgba(255,255,255,0.1);
+    content: "";
+    height: 55px;
+    width: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 40%;
+    z-index: 1;
+}
+.hero-right img{
+    width: 100%;
+}
+
 /* desktop responsive */
 @media screen and (min-width:764px){
     #menuBtn, #closeBtn{
@@ -102,4 +178,41 @@ header{
         justify-content: center;
         gap: 8rem;
     }
+    .hero-title{
+        font-size: 2rem;
+    }
+    .hero-logo{
+        width: 350px;
+    }
+    .hero{
+        height: 145vh;
+    }
+
+
 }
+@media screen and (min-width:1024px) {
+    .hero{
+        height: 600px;
+        justify-content: center;
+    }
+    .hero-inner{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        width: 1024px;
+        height: 100%;
+    }
+    .hero-p{
+        width: 500px;
+    }
+    .hero-title{
+        font-size: 2rem;
+    }
+    .hero-logo{
+        width: 400px;
+    }
+    .spiral-img{
+        height: auto;
+    }
+}
+
