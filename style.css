@@ -4,13 +4,13 @@
     margin: 0;
     box-sizing: border-box;
 }
-button, a, ul{
+button,a, ul{
     all: unset;
     cursor: pointer;
 }
 /* menu button */
 header{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.949);
     width: 100%;
     display: flex;
     align-items: center;
@@ -131,6 +131,7 @@ header{
     
     
 }
+
 .hero-title{
     font-family: 'Sniglet', cursive;
     font-size: 1.5rem;
@@ -185,6 +186,113 @@ header{
 .hero-right img{
     width: 100%;
 }
+/* anniversary */
+.anniversary{
+    width: 100%;
+    height: 100vh;
+    background: url('images/anniversary-bg.jpg');
+    background-position: top;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.anniversary::before{
+    position: absolute;
+    background: url(/images/zig-zag-border.png);
+    width: 100%;
+    height: 35px;
+    content: '';
+    left: 0;
+     top: -1rem;
+    z-index: 3;
+}
+
+
+
+/*
+.btn{
+    font-family: "Dosis", sans-serif;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.375rem;
+    border-radius: 25px;
+    display: block;
+    overflow: hidden;
+    padding: 2px 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    border: solid 3px transparent;
+    z-index: 1;
+}
+.btn::before{
+    content: "";
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.btn::after{
+    content: "";
+    border-radius: 0 0 3em 3em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+}
+.btn-red{
+    border-color: #B11A45;
+
+}
+.btn-red::before{
+    background: #f5637e;
+}
+.btn-red::after{
+    background: #cc3b5b;
+}
+.btn span{
+    text-shadow: 0 2px rgba(0,0,0,0.2);
+    display: block;
+    position: relative;
+    z-index: 2;
+    padding: 4px 0 9px 0;
+    border-radius: 25px;
+}
+.btn-red span{
+    background: #C72549;
+}
+.btn span::before{
+    background-color: rgba(255,255,255,0.1);
+    content: "";
+    height: 55px;
+    width: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 40%;
+    z-index: 1;
+}
+.starburst{
+    display: block;
+    position: static;
+    width: 240px;
+    height: 49.8px;
+    inset: auto;
+    margin-right: 0px;
+    pointer-events: none;
+}
+*/
+
+
+
+
+
 /* desktop responsive */
 @media screen and (min-width:764px){
     #menuBtn, #closeBtn{
@@ -201,6 +309,7 @@ header{
         padding-bottom: 0;
         justify-content: center;
         gap: 8rem;
+        background-color: transparent;
     }
     .hero-title{
         font-size: 2rem;
@@ -210,6 +319,11 @@ header{
     }
     .hero{
         height: 145vh;
+    }
+    .anniversary{
+        height: 500px;
+        background-position: center;
+        
     }
 
 
