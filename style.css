@@ -19,6 +19,17 @@ header{
     position: fixed;
     z-index: 4;
 }
+p{
+    font-family: "Dosis", "Open sans", "Helvetica", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    margin-bottom: 0.8em;
+    text-shadow: 0 2px 0 rgba(255,255,255,0.5);
+    color: #1423A5;
+}
+
 .h-links{
     position: absolute;
     top: 4.1rem;
@@ -141,11 +152,6 @@ header{
     width: 220px;
 }
 .hero-p{
-    font-family: 'Dosis', sans-serif;
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: #1423A5;
-    line-height: 1.6rem;
     padding: 0 .8rem;
 }
 .hero-left{
@@ -194,6 +200,9 @@ header{
     background-position: top;
     background-size: cover;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .anniversary::before{
     position: absolute;
@@ -205,10 +214,46 @@ header{
     top: -1rem;
     z-index: 3;
 }
+.an-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+.an-inner{
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 1.5rem;
+    margin: 0 1rem;
+    border-radius: 1.25rem;
+    gap: 1rem;
+}
+.an-img{
+    width: 300px;
+    margin-bottom: -2rem;
+    z-index: 2;
+}
+.an-inner h1{
+    font-size: 2rem;
+    font-family: 'Sniglet', cursive;
+    font-weight: 700;
+    color: #1423A5;
+    margin-top: 1rem;
+}
 
-
-
-/*
+.btn-container{
+    display: block;
+    position: static;
+    width: 240px;
+    height: 49.8px;
+    inset: auto;
+    margin-right: 0px;
+    pointer-events: none;
+}
 .btn{
     font-family: "Dosis", sans-serif;
     color: #fff;
@@ -275,16 +320,8 @@ header{
     bottom: 40%;
     z-index: 1;
 }
-.starburst{
-    display: block;
-    position: static;
-    width: 240px;
-    height: 49.8px;
-    inset: auto;
-    margin-right: 0px;
-    pointer-events: none;
-}
-*/
+
+
 /* news & videos */
 .news-videos{
     height: 170vh;
@@ -344,7 +381,14 @@ header{
         height: 110vh;
         background-position:bottom;
     }
-
+    .an-container{
+        flex-direction: row;
+    }
+    .an-img{
+        width: 300px;
+        margin-right: -2rem;
+        z-index: 2;
+    }
 
 
 }
