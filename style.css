@@ -163,6 +163,7 @@ p{
     align-items: center;
     gap: .5rem;
 }
+/*
 .hero-btn{
     font-family: 'Dosis', sans-serif;
     font-size: 1.3rem;
@@ -189,6 +190,7 @@ p{
     bottom: 40%;
     z-index: 1;
 }
+*/
 .hero-right img{
     width: 100%;
 }
@@ -248,7 +250,7 @@ p{
 .btn-container{
     display: block;
     position: static;
-    width: 240px;
+    width: 90%;
     height: 49.8px;
     inset: auto;
     margin-right: 0px;
@@ -320,6 +322,21 @@ p{
     bottom: 40%;
     z-index: 1;
 }
+.btn-blue{
+    border-color: #1423A5;
+}
+.btn-blue::before{
+    background-color: #7197ff;
+}
+.btn-blue::after{
+    background-color: #1646c9;
+}
+.btn-blue span{
+    background-color: #2457e4;
+}
+.hero-left .btn-container{
+    width: 300px;
+}
 
 
 /* news & videos */
@@ -373,7 +390,7 @@ p{
         height: 145vh;
     }
     .anniversary{
-        height: 500px;
+        height: 550px;
         background-position: center;
         
     }
@@ -388,7 +405,12 @@ p{
         width: 300px;
         margin-right: -2rem;
         z-index: 2;
+        margin-bottom: 4rem;
     }
+    .btn-container{
+        width: 300px;
+    }
+
 
 
 }
