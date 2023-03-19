@@ -341,12 +341,18 @@ p{
 
 /* news & videos */
 .news-videos{
-    height: 170vh;
+    height: 1287px;
     width: 100%;
     background: url('images/star-gradient-bg.jpg');
     background-position: top;
     background-size: cover;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    
 }
 .news-videos::before{
     position: absolute;
@@ -358,7 +364,38 @@ p{
     top: -1rem;
     z-index: 3;
 }
-
+.news-videos h1{
+    font-family: 'Sniglet', cursive;
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+}
+.news-container{
+    width: 100%vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 0 1rem;
+    justify-content: center;
+    
+}
+.news-container a{
+    background-color: white;
+    display: block;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
+    
+    
+}
+.news-container a img{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.news-container a p{
+    font-size: 1.1rem;
+    padding: 0 .5rem;
+}
 
 
 
@@ -410,6 +447,14 @@ p{
     .btn-container{
         width: 300px;
     }
+    .news-container{
+        width: 100%vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.25rem;
+        padding: 0 1rem;
+    }
+
 
 
 
@@ -441,6 +486,17 @@ p{
     .news-videos{
         height: 600px;
         background-position:bottom;
+    }
+    .news-container{
+        width: 100%vw;
+        display: flex;
+        flex-direction: row;
+        gap: 1.25rem;
+        padding: 0 1rem;
+    }
+    .news-container a{
+        width: 300px;
+        height: 300px;
     }
 }
 
