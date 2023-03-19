@@ -214,7 +214,6 @@ p{
     content: '';
     left: 0;
     top: -1rem;
-    z-index: 3;
 }
 .an-container{
     display: flex;
@@ -362,7 +361,7 @@ p{
     content: '';
     left: 0;
     top: -1rem;
-    z-index: 3;
+    
 }
 .news-videos h1{
     font-family: 'Sniglet', cursive;
@@ -397,6 +396,66 @@ p{
     padding: 0 .5rem;
 }
 
+
+/* kirby's return*/
+.kirby-returns{
+    width: 100%;
+    height: 90vh;
+    position: relative;
+}
+.kirby-returns::before{
+    content: '';
+    position: absolute;
+    background: url(/images/zig-zag-border.png);
+    width: 100%;
+    height: 35px;
+    content: '';
+    left: 0;
+    top: -1rem;
+}
+.kr-pattern-bg{
+    width: 100%;
+    height: 100%;
+    background: #ffec40;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+}
+.kr-bg{
+    width: 100%;
+    height: 100%;
+    background: url(/images/bg_starpattern-white.png);
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    opacity: .35;
+
+}
+.kr-container h1{
+    font-family: 'Sniglet', cursive;
+    font-weight: 700;
+    color: #1423A5;
+}
+
+/* featured */
+.featured{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    padding: 4rem 0 6rem;
+    background: url('images/history-bg-pattern-pink-2x.jpg');
+    background-size: 500px;
+}
+.featured::before{
+    content: '';
+    position: absolute;
+    background: url(/images/zig-zag-border.png);
+    width: 100%;
+    height: 35px;
+    content: '';
+    left: 0;
+    top: -1rem;
+}
 
 
 /* desktop responsive */
@@ -495,7 +554,7 @@ p{
         padding: 0 1rem;
     }
     .news-container a{
-        width: 300px;
+        max-width: 300px;
         height: 300px;
     }
 }
