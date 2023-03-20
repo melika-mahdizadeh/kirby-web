@@ -478,11 +478,16 @@ p{
 /* featured */
 .featured{
     width: 100%;
-    height: 80vh;
+    height: 1100px;
     position: relative;
-    padding: 4rem 0 6rem;
+    padding: 0 1rem;
     background: url('images/history-bg-pattern-pink-2x.jpg');
     background-size: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
 .featured::before{
     content: '';
@@ -493,6 +498,75 @@ p{
     content: '';
     left: 0;
     top: -1rem;
+    align-items: center;
+    justify-content: center;
+}
+.featured h1{
+    font-family: 'Sniglet', cursive;
+    color: #1423A5;
+    text-shadow: 0 2px 0 rgba(255,255,255,0.5);
+    font-size: 2.5rem;
+    text-align: center;
+
+}
+.featured-games{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+}
+.f-game-container{
+    position: relative;
+    
+}
+.f-game{
+    border: 3px solid #ffffff;
+    border-radius: 1.75rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 4px 4px 0 0 rgba(0,0,0,0.2);
+    display: flex;
+    z-index: 1;
+}
+.f-game img{
+    width: 100%;
+}
+.f-subtitle{
+    background-color: #fff;
+    padding: .5rem;
+    border-bottom-left-radius: .8rem;
+    border-bottom-right-radius: .8rem;
+    position: absolute;
+    right: 1.5rem;
+    z-index: 0;
+    font-family: "Dosis", "Open sans", "Helvetica", sans-serif;
+    font-size: .8rem;
+    letter-spacing: 0.5px;
+    color: #E60012;
+}
+.featured .btn-container{
+    margin-top: 1.5rem;
+}
+/* amiibo section */
+.amiibo{
+    width: 100%;
+    height: 90vh;
+    background: url('images/platform-1-bg.gif');
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.amiibo::before{
+    content: '';
+    position: absolute;
+    background: url(/images/platform1-top.png);
+    width: 100%;
+    height: 116px;
+    content: '';
+    left: 0;
+    top: -2rem;
 }
 
 
@@ -561,7 +635,23 @@ width: 600px;
         width: 150px;
         height: 150px;
     }
+    .featured h1{
+        font-size: 3rem;
+    
+    }
 
+    .featured{
+        height: 600px;
+    }
+    .f-game-container{
+        max-width: 300px;
+        
+    }
+    .featured-games{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
 
 
 }
@@ -603,6 +693,11 @@ width: 600px;
     .news-container a{
         max-width: 300px;
         height: 300px;
+    }
+    .featured-games{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
     }
 }
 
