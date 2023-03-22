@@ -609,13 +609,134 @@ p{
     font-weight: 800;
     letter-spacing: 0.5px;
 }
+.amiibo::after{
+    content: '';
+    position: absolute;
+    background: url(/images/zig-zag-border.png);
+    width: 100%;
+    height: 35px;
+    content: '';
+    left: 0;
+    bottom: -1rem;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
 /* play nintendo */
 .play-nintendo{
     width: 100%;
-    height: 90vh;
+    height: 1200px;
     position: relative;
     background: linear-gradient(to bottom, #fcd555 10%, #ffae29 100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    gap: 1rem;
 }
+@keyframes cloudAnimation{
+    from
+        {transform:translateX(-1955px)}
+    to
+        {transform:translateX(0px)}
+}
+.cloud-top{
+    animation: cloudAnimation 60s linear infinite;
+    background: transparent url(/images/footer-bg.png) left top;
+    position: absolute;
+    content: '';
+    height: 217px;
+    width: 9775px;
+    bottom: -1rem;
+    overflow-x: hidden;
+}
+.play-nintendo-title{
+    font-family: 'Sniglet', cursive;
+    color: #1423A5;
+    text-shadow: 0 2px 0 rgba(255,255,255,0.5);
+    font-size: 2.5rem;
+    text-align: center;
+    z-index: 1;
+}
+.pn-cards-container{
+    display: grid;
+    gap: 1rem;
+    padding: .5rem;
+}
+.pn-card{
+    width: 100%;
+    box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+}
+.card1{
+    background-color:rgb(218, 218, 218);
+}
+.card2{
+    background-color: rgb(180, 47, 245);
+}
+.card3{
+    background-color: rgb(0, 210, 255);
+}
+.card4{
+    background-color: rgb(29, 219, 129);
+}
+.pn-card-image{
+    width: 50%;
+    height: 100%;
+}
+.pn-card div{
+    width: 50%;
+    height: 100%;
+    padding: .5rem;
+    gap: .5rem;
+    position: relative;
+}
+
+.pn-card-icon{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 17vw;
+    padding: .8rem;
+    border-radius: 10rem;
+
+}
+
+
+.pn-card-cat{
+    font-family: sans-serif;
+    font-size: 2.5vw;
+    padding: 5px;
+    font-weight: 400;
+    
+}
+.pn-card-title{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    font-size: 4.5vw;
+    display: block;
+    margin-bottom: .1rem;
+    margin-top: .5rem;
+}
+.pn-card-p{
+    font-family: 'Dosis', sans-serif;
+    font-size: 3vw;
+    display: block;
+}
+.pn-pattern-bg{
+    width: 100%;
+    height: 100%;
+    background: url(images/star-single.png);
+    position: absolute;
+}
+
+
+/*
 .play-nintendo::before{
     content: '';
     position: absolute;
@@ -628,6 +749,16 @@ p{
     align-items: center;
     justify-content: center;
 }
+*/
+/* footer */
+.footer{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    display: flex;
+}
+
+
 
 /* desktop responsive */
 @media screen and (min-width:764px){
@@ -712,7 +843,7 @@ width: 600px;
         gap: 1rem;
     }
     .amiibo{
-        height: 600px;
+        height: 650px;
     }
     .amiibo h1{
         font-size: 3rem;
@@ -723,7 +854,35 @@ width: 600px;
         width: 100%;
         gap: 1rem;
     }
-
+    .pn-cards-container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .pn-card div{
+        padding: .5rem;
+        gap: .3rem;
+    }
+    .pn-card-cat{
+        font-size: .8rem;
+        padding: .5rem;
+    }
+    .pn-card-title{
+        font-size: 1rem;
+    }
+    .pn-card-p{
+        font-size: .9rem;
+    }
+    .footer{
+        height: 220px;
+    }
+    .play-nintendo{
+        height: 780px;
+    }
+    .pn-card-icon{
+        width: 80px;
+        padding: .8rem;
+        border-radius: 10rem;
+    
+    }
 
 }
 @media screen and (min-width:1024px) {
@@ -780,6 +939,14 @@ width: 600px;
 
     .amiibo-container a{
         max-width: 250px;
+    }
+    .pn-card{
+        width: 407px;
+    }
+    .pn-card div{
+        padding-top: 1rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
     }
 
 }
