@@ -79,6 +79,7 @@ p{
     margin-left: .5rem;
     
 }
+
 .h-link:hover::after{
     content: '';
     display: inline-block;
@@ -208,7 +209,7 @@ p{
 }
 .anniversary::before{
     position: absolute;
-    background: url(/images/zig-zag-border.png);
+    background: url('images/zig-zag-border.png');
     width: 100%;
     height: 35px;
     content: '';
@@ -253,7 +254,6 @@ p{
     height: 49.8px;
     inset: auto;
     margin-right: 0px;
-    pointer-events: none;
 }
 .btn{
     font-family: "Dosis", sans-serif;
@@ -270,6 +270,10 @@ p{
     transition: all 0.5s ease;
     border: solid 3px transparent;
     z-index: 1;
+}
+.btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
 .btn::before{
     content: "";
@@ -332,6 +336,7 @@ p{
 }
 .btn-blue span{
     background-color: #2457e4;
+    
 }
 .hero-left .btn-container{
     width: 300px;
@@ -355,7 +360,7 @@ p{
 }
 .news-videos::before{
     position: absolute;
-    background: url(/images/zig-zag-border.png);
+    background: url('images/zig-zag-border.png');
     width: 100%;
     height: 35px;
     content: '';
@@ -410,7 +415,7 @@ p{
 .kirby-returns::before{
     content: '';
     position: absolute;
-    background: url(/images/zig-zag-border.png);
+    background: url('images/zig-zag-border.png');
     width: 100%;
     height: 35px;
     content: '';
@@ -428,7 +433,7 @@ p{
 .kr-bg{
     width: 100%;
     height: 100%;
-    background: url(/images/bg_starpattern-white.png);
+    background: url('images/bg_starpattern-white.png');
     position: absolute;
     top: 0;
     z-index: -1;
@@ -448,10 +453,9 @@ p{
     color: #1423A5;
     font-size: 2rem;
 }
+
 .kr-video-btn{
     width: 100%;
-}
-.kr-video-btn{
     border: 3px solid #ffffff;
     border-radius: 1.75rem;
     position: relative;
@@ -492,7 +496,7 @@ p{
 .featured::before{
     content: '';
     position: absolute;
-    background: url(/images/zig-zag-border.png);
+    background: url('images/zig-zag-border.png');
     width: 100%;
     height: 35px;
     content: '';
@@ -564,7 +568,7 @@ p{
 .amiibo::before{
     content: '';
     position: absolute;
-    background: url(/images/platform1-top.png);
+    background: url('images/platform1-top.png');
     width: 100%;
     height: 116px;
     content: '';
@@ -612,7 +616,7 @@ p{
 .amiibo::after{
     content: '';
     position: absolute;
-    background: url(/images/zig-zag-border.png);
+    background: url('images/zig-zag-border.png');
     width: 100%;
     height: 35px;
     content: '';
@@ -643,7 +647,7 @@ p{
 }
 .cloud-top{
     animation: cloudAnimation 60s linear infinite;
-    background: transparent url(/images/footer-bg.png) left top;
+    background: transparent url('images/footer-bg.png') left top;
     position: absolute;
     content: '';
     height: 217px;
